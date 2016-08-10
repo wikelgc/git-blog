@@ -3,6 +3,8 @@
 var articleList = document.getElementsByClassName("article-list");
 var articleDetails = document.getElementsByClassName("article-details"); 
 
+var spinner = document.getElementsByClassName("spinner")[0];
+var list = document.getElementsByClassName("list")[0];
 
 // index.js
 $(function(){
@@ -24,6 +26,12 @@ function getMessage(){
        		console.log(result);
        		var html =showrender(result);
        		articleList.innerHTML = html;
+
+       		setTimeout(function(){
+       			spinner.style.display = "none";
+       			list.style.display = "block";
+       		},500);
+       		
 
        		// 可以操作渲染后的DOM事件
 
@@ -68,7 +76,7 @@ function showrender(result){
 		console.log(title);
 
 		html+='<li>'+
-					'<a class="wrap-img"><img src=""></a>'+
+					'<a class="wrap-img"><img src="./images/image.png"></a>'+
 					'<div>'+
 						'<p class="list-top">'+
 							'<a class="author-name">'+'木子李'+'</a>'+

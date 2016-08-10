@@ -4,7 +4,12 @@ html{
 	font-family: "微软雅黑";
 }
 
+.w .spinner{
+	display: block;
+}
+
 .w .list{
+	display: none;
 	padding-top: 2.25rem;
 }
 
