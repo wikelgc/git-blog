@@ -1,0 +1,134 @@
+.marked{
+	position: relative;
+	font-size: 16px;
+	font-family:  -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+/*文章的标题*/
+.marked h1{
+	text-transform: uppercase;
+
+	font-size: 1em;
+	line-height: 1em;
+	text-align:center;
+	margin:1em auto;
+	word-break: break-all;
+	font-weight: bold;
+
+	padding-top:0.5em;
+	font-weight:600;
+	color:#000;
+}
+
+.marked strong{
+	font-weight:600;
+}
+
+
+/*文章内的一级标题*/
+.marked h2{
+	margin-top: 18px;
+	margin-bottom: 10px;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.8;
+	color: rgb(61, 167, 66);
+}
+
+.marked h2:first-child{
+	margin-top: 0;
+}
+
+
+/*文章内的二级标题*/
+.marked h3{
+	/*margin-top: 3em;*/
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.8;
+	color: rgb(0, 122, 170);
+}
+
+/*文章内的三级标题*/
+.marked h4{
+	font-family:"Sentinel";
+	font-size:1.1em;
+	margin-left:1.4em;
+	color:#808080;
+	text-transform: uppercase;
+	font-weight:700;
+	margin-bottom: -0.5em;
+	padding-bottom:0em;
+	margin-top:1.5em;
+}
+
+.marked blockquote{
+	display: block;
+	padding-left: 0.5em;
+	border-left: 0.2em solid #f5f5f5;
+}
+
+.marked p{
+	font-family:"Sentinel";
+	line-height: 1.5em;
+	font-size:1em;
+}
+
+.marked ul{
+	list-style: square;
+	padding-left: 1.6em;
+}
+
+.marked ul>li{
+	list-style: disc;
+	font-family:"Whitney";
+	line-height: 1.75em;
+	font-size:1.01em;
+	font-weight:500;
+	color:#403E3D;
+}
+
+
+.marked a{
+	color:#988675;
+	text-decoration:none;
+	font-weight:600;
+	font-size:0.9em;
+}
+
+.marked a.footnote{
+	vertical-align: super;
+	font-size:small;
+}
+
+.amarked .reversefootnote{
+	color:#403E3D;
+}
+
+.marked div.footnotes li{
+	font-family:"Whitney";
+	line-height: 1.75em;
+	font-size:0.90em;
+	font-weight:500;
+	color:#A8A09E;
+}
+
+.marked div.footnotes p{
+	font-family:"Whitney";
+}
+
+.marked code{
+	font-size:0.9em;
+	/*color:#988675;*/
+	/*background-color: #bbb;*/
+}
+
+.marked pre{
+	overflow: hidden;
+	/*text-indent: 1rem;*/
+
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}

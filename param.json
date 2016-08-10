@@ -1,0 +1,23 @@
+{
+
+	// 博客的标题
+	"title":"博客",
+
+	"github":{
+		"username":"wikelgc",
+		// 文章的地址
+		"repository":"note",
+		"url":"https://github.com/wikelgc/git-blog.git"
+		// 博客的地址
+		
+	},
+	
+	// 博客的用户信息 
+	"user":{	
+		"name":"李观称",
+		// 头像的链接地址
+		"avatar":""
+		// 
+	}
+	
+}
