@@ -3,7 +3,7 @@
 var articleList = document.getElementsByClassName("article-list");
 var articleDetails = document.getElementsByClassName("article-details"); 
 
-var spinner = document.getElementsByClassName("spinner")[0];
+var spinner = document.getElementsByClassName("spinner");
 var list = document.getElementsByClassName("list")[0];
 
 // index.js
@@ -28,7 +28,8 @@ function getMessage(){
        		articleList.innerHTML = html;
 
        		setTimeout(function(){
-       			spinner.style.display = "none";
+       			spinner[0].style.display = "none";
+       			spinner[1].style.display = "none";
        			list.style.display = "block";
        		},500);
        		
@@ -58,8 +59,7 @@ function addEvent(result){
 				// console.log(url);
 				
 				articleList[0].style.display = "none";
-				articleDetails[0].style.display = "block";
-
+				spinner[1].style.display = "block";
 				getArticleDetails(url);
 
 			}
@@ -93,7 +93,7 @@ function showrender(result){
 	}
 	// console.log(html);
 
-	getArticleDetails();
+	// getArticleDetails();
 	return html;
 }
 
@@ -115,11 +115,15 @@ function renderArticleDetails(result){
 	var articleDetails = document.getElementsByClassName("article-details")[0];
 	var markedDetails = articleDetails.getElementsByClassName("marked")[0];
 
-	// console.log(result);
 	var html = marked(result);
-	// console.log(html);
 
 	markedDetails.innerHTML = html;
+	
+	setTimeout(function(){
+		spinner[1].style.display = "none";
+		articleDetails.style.display = "block";
+	},300);
+	
 
 	$(document).ready(function() {
   $('pre code').each(function(i, block) {
