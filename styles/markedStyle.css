@@ -78,7 +78,7 @@
 }
 
 .marked ul{
-	list-style: square;
+	list-style: disc;
 	padding-left: 1.6em;
 }
 
@@ -90,6 +90,24 @@
 	font-weight:500;
 	color:#403E3D;
 }
+
+.marked ol{
+	list-style-type: decimal;
+	/*counter-reset: tn1;*/
+	padding-left: 1.7em;
+	/*margin-left: 1.6em;*/
+
+}
+
+.marked ol>li{
+	/*counter-increment: tn1;*/
+	/*margin-left: -1em;*/
+	font-family: "Whitney";
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
 
 
 .marked a{
@@ -123,6 +141,7 @@
 .marked code{
 	font-size:0.9em;
 	line-height: 1.6em;
+	border:1px solid #eee;
 	/*color:#988675;*/
 	/*background-color: #bbb;*/
 }

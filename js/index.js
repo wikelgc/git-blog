@@ -101,7 +101,7 @@ function getArticleDetails(url){
 		$.ajax({
         type:"GET",
         url: url,
-        dataType:"Text",
+        dataType:"text",
         success:function (result) {
        		renderArticleDetails(result);
         },
