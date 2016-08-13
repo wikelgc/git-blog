@@ -5,6 +5,7 @@ var articleDetails = document.getElementsByClassName("article-details");
 
 var spinner = document.getElementsByClassName("spinner");
 var list = document.getElementsByClassName("list")[0];
+var logo = document.getElementsByClassName("logo")[0];
 
 // index.js
 $(function(){
@@ -16,6 +17,17 @@ $(function(){
 });
 
 function menuEvent(){
+
+	logo.onclick = function(){
+		var menu = document.getElementsByClassName("menu")[0];
+
+			if(menu.style.display== "none"){
+				menu.style.display = "block";
+			}else{
+				menu.style.display = "none";
+			}
+	}
+
 	var menu = document.getElementsByClassName("menu")[0].getElementsByTagName("li");
 	for(var i=0;i<menu.length;i++){
 		(function(i){
