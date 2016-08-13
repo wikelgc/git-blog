@@ -6,6 +6,7 @@ var articleDetails = document.getElementsByClassName("article-details");
 var spinner = document.getElementsByClassName("spinner");
 var list = document.getElementsByClassName("list")[0];
 var logo = document.getElementsByClassName("logo")[0];
+var menu = list.getElementsByClassName("menu")[0];
 
 // index.js
 $(function(){
@@ -19,12 +20,11 @@ $(function(){
 function menuEvent(){
 
 	logo.onclick = function(){
-		var menu = document.getElementsByClassName("menu")[0];
-
+			menu = list.getElementsByClassName("menu")[0];
 			if(menu.style.display== "none"){
-				menu.style.display = "block";
+					menu.style.display = "block";
 			}else{
-				menu.style.display = "none";
+					menu.style.display = "none";
 			}
 	}
 
@@ -84,13 +84,14 @@ function addEvent(result){
 	
 
 	console.log("sssss"+article.length);
-	for(var i =article.length-1;i>0;i--){
+	for(var i =article.length-1;i >= 0;i--){
 
 		(function(i){
 			return article[i].onclick=function(){
 				var url = result[article.length-i+2].download_url;
 				articleList[0].style.display = "none";
 				spinner[1].style.display = "block";
+				menu.style.display = "none";
 				getArticleDetails(url);
 			}
 		})(i)
@@ -109,14 +110,14 @@ function showrender(result){
 					'<a class="wrap-img"><img src="./images/image.png"></a>'+
 					'<div>'+
 						'<p class="list-top">'+
-							'<a class="author-name">'+'木子李'+'</a>'+
+							'<a class="author-name">'+'主题：笔记'+'</a>'+
+							'<a class="publish-time">'+2+'天前</a>'+
 						'</p>'+
 						'<h4 class="title">'+title+'</h4>'+
 						'<div class="list-footer">'+
 							'<span>阅读</span>'+
 							'<span>评论</span>'+
-							'<span>喜欢</span>'+
-							'<span>打赏</span>'+
+							'<span>字数 '+data[i].size+'</span>'+
 						'</div>'+
 					'</div>'+
 				'</li>'; 

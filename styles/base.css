@@ -54,6 +54,10 @@ html{
 	overflow: hidden;
 }
 
+.w .menu{
+	display: none;
+}
+
 .w header ul li{
 	width: 100%;
 	padding-left: 0.8rem;
@@ -117,6 +121,14 @@ html{
 	display: block;
 	width: calc(100%-1rem);
 	padding: 0 .5rem;
+	/*padding-bottom: 3rem;*/
+}
+
+.w .list .article-list .publish-time{
+	display: inline-block;
+	float: right;
+	font-size: 0.7rem;
+	color:#aaa;
 }
 
 
@@ -191,6 +203,7 @@ html{
 
 	width: (100%-1rem);
 	padding: 0 0.5rem;
+	padding-bottom: 3rem;
 
 	overflow: hidden;
 }
