@@ -11,8 +11,30 @@ $(function(){
 	// alert("hello");
 	console.log("ss");
 	getMessage();
+
+	menuEvent();
 });
 
+function menuEvent(){
+	var menu = document.getElementsByClassName("menu")[0].getElementsByTagName("li");
+	for(var i=0;i<menu.length;i++){
+		(function(i){
+
+				return menu[i].onclick = function(){
+					// alert("hello"+i);
+					switch(i){
+						case 0 : (function(){
+							// alert("1");
+							articleList[0].style.display = "block";
+							articleDetails[0].style.display = "none";
+						})();break;
+					}
+				}
+		})(i);
+	
+	}
+
+}
 
 function getMessage(){
 	var articleList = document.getElementsByClassName("article-list")[0];
@@ -50,18 +72,14 @@ function addEvent(result){
 	
 
 	console.log("sssss"+article.length);
-	for(var i = 0;i<article.length;i++){
+	for(var i =article.length-1;i>0;i--){
 
 		(function(i){
 			return article[i].onclick=function(){
-				// console.log("i"+i);
-				var url = result[i+1].download_url;
-				// console.log(url);
-				
+				var url = result[article.length-i+2].download_url;
 				articleList[0].style.display = "none";
 				spinner[1].style.display = "block";
 				getArticleDetails(url);
-
 			}
 		})(i)
 	}
@@ -71,8 +89,8 @@ function showrender(result){
 	var data = result;
 	var name = "";
 	var html = ""
-	for(var i = 1;i<data.length;i++){
-		title = data[i].name.replace(/\.md$/g,'');
+	for(var i = data.length - 1;i>2;i--){
+		title = data[i].name.replace(/\.md$/g,'').substring(8);
 		console.log(title);
 
 		html+='<li>'+
@@ -91,9 +109,6 @@ function showrender(result){
 					'</div>'+
 				'</li>'; 
 	}
-	// console.log(html);
-
-	// getArticleDetails();
 	return html;
 }
 
@@ -106,7 +121,6 @@ function getArticleDetails(url){
        		renderArticleDetails(result);
         },
         error:function (result, status) {
-           // console.log(result);
         }
 	});
 }

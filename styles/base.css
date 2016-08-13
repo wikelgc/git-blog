@@ -36,6 +36,74 @@ html{
 	line-height: 2.25rem;
 }
 
+.w header ul{
+	display: inline-block;
+	position: absolute;
+	color: white;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	top:2.25rem;
+	left: 0;
+	width: 40%;
+	/*height: 5rem;*/
+	font-size: 0.8rem;
+	/*font-size: 1.35rem;*/
+	line-height: 1.5rem;
+	background-color: #e78170;
+	overflow: hidden;
+}
+
+.w header ul li{
+	width: 100%;
+	padding-left: 0.8rem;
+	font-weight: normal;
+}
+
+.w header ul li:hover{
+	font-size: 0.85rem;
+	border-bottom: 1px solid rgba(185,53,32,0.1);
+	border-top: 1px solid rgba(185,53,32,0.1);
+	overflow: hidden;
+	/*background-color: */
+
+}
+
+
+
+.w header ul i{
+	display: inline-block;
+
+	background-image: url(../images/menu.png);
+	background-repeat: no-repeat;
+	/*background-position: center;	*/
+	background-size: cover;
+	width: 0.7rem;
+	height: 0.7rem;
+	margin-right: 1.5rem;
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+	vertical-align: top;
+}
+
+.w header  .home{
+	background-position: 0 -2.1rem;
+}
+
+.w header .tag{
+	background-position: 0 -0.7rem;
+}
+
+.w header  .classify{
+	background-position:  0 -1.4rem;
+}
+
+.w header .about{
+	background-position: 0  0;
+}
+
+
+
 .w .list header div{
 	font-size: 0.8rem;
 	line-height: 2.25rem;
