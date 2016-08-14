@@ -141,14 +141,15 @@
 .marked code{
 	font-size:0.9em;
 	line-height: 1.6em;
-	border:1px solid #eee;
-	/*color:#988675;*/
-	/*background-color: #bbb;*/
+	/*border:1px solid #eee;*/
+	
 }
 
 .marked pre{
 	overflow: hidden;
 	/*text-indent: 1rem;*/
+	/*border-radius:0.2rem solid white; */
+	/*border:0.2rem solid red;*/
 
 	white-space: pre-wrap;
 	word-wrap: break-word;
