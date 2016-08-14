@@ -9,13 +9,19 @@ var logo = document.getElementsByClassName("logo")[0];
 var menu = list.getElementsByClassName("menu")[0];
 
 // index.js
-$(function(){
+
+(function($){
+
+	$(function(){
 	// alert("hello");
 	console.log("ss");
 	getMessage();
 
 	menuEvent();
 });
+
+})(Zepto);
+
 
 function menuEvent(){
 
